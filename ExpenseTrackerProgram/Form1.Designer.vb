@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class LoginForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,109 +23,109 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label1 = New Label()
-        TextBox1 = New TextBox()
+        Text_User = New TextBox()
         Label2 = New Label()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
+        Text_Password = New TextBox()
+        Btn_Login = New Button()
+        Btn_SignUp = New Button()
+        Btn_Exit = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(224, 98)
+        Label1.Location = New Point(75, 178)
         Label1.Name = "Label1"
         Label1.Size = New Size(66, 25)
         Label1.TabIndex = 0
         Label1.Text = "User"
         ' 
-        ' TextBox1
+        ' Text_User
         ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(224, 123)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(299, 34)
-        TextBox1.TabIndex = 1
+        Text_User.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_User.Location = New Point(75, 203)
+        Text_User.Name = "Text_User"
+        Text_User.Size = New Size(299, 34)
+        Text_User.TabIndex = 1
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(224, 169)
+        Label2.Location = New Point(75, 249)
         Label2.Name = "Label2"
         Label2.Size = New Size(89, 22)
         Label2.TabIndex = 2
         Label2.Text = "Password"
         ' 
-        ' TextBox2
+        ' Text_Password
         ' 
-        TextBox2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(224, 194)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(299, 34)
-        TextBox2.TabIndex = 3
+        Text_Password.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Password.Location = New Point(75, 274)
+        Text_Password.Name = "Text_Password"
+        Text_Password.Size = New Size(299, 34)
+        Text_Password.TabIndex = 3
         ' 
-        ' Button1
+        ' Btn_Login
         ' 
-        Button1.BackColor = SystemColors.ButtonHighlight
-        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(224, 234)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(104, 31)
-        Button1.TabIndex = 4
-        Button1.Text = "LOGIN"
-        Button1.UseVisualStyleBackColor = False
+        Btn_Login.BackColor = SystemColors.ButtonHighlight
+        Btn_Login.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Login.Location = New Point(75, 314)
+        Btn_Login.Name = "Btn_Login"
+        Btn_Login.Size = New Size(104, 31)
+        Btn_Login.TabIndex = 4
+        Btn_Login.Text = "LOGIN"
+        Btn_Login.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' Btn_SignUp
         ' 
-        Button2.BackColor = SystemColors.ButtonHighlight
-        Button2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(334, 234)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(108, 31)
-        Button2.TabIndex = 5
-        Button2.Text = "SIGN UP"
-        Button2.UseVisualStyleBackColor = False
+        Btn_SignUp.BackColor = SystemColors.ButtonHighlight
+        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_SignUp.Location = New Point(185, 314)
+        Btn_SignUp.Name = "Btn_SignUp"
+        Btn_SignUp.Size = New Size(108, 31)
+        Btn_SignUp.TabIndex = 5
+        Btn_SignUp.Text = "SIGN UP"
+        Btn_SignUp.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' Btn_Exit
         ' 
-        Button3.BackColor = Color.Tomato
-        Button3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = SystemColors.InfoText
-        Button3.Location = New Point(448, 234)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(75, 31)
-        Button3.TabIndex = 6
-        Button3.Text = "EXIT"
-        Button3.UseVisualStyleBackColor = False
+        Btn_Exit.BackColor = Color.Tomato
+        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Exit.ForeColor = SystemColors.InfoText
+        Btn_Exit.Location = New Point(299, 314)
+        Btn_Exit.Name = "Btn_Exit"
+        Btn_Exit.Size = New Size(75, 31)
+        Btn_Exit.TabIndex = 6
+        Btn_Exit.Text = "EXIT"
+        Btn_Exit.UseVisualStyleBackColor = False
         ' 
-        ' Form1
+        ' LoginForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(800, 450)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox2)
+        ClientSize = New Size(449, 450)
+        Controls.Add(Btn_Exit)
+        Controls.Add(Btn_SignUp)
+        Controls.Add(Btn_Login)
+        Controls.Add(Text_Password)
         Controls.Add(Label2)
-        Controls.Add(TextBox1)
+        Controls.Add(Text_User)
         Controls.Add(Label1)
         ForeColor = SystemColors.InfoText
-        Name = "Form1"
+        Name = "LoginForm"
         Text = "Login"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Text_User As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Text_Password As TextBox
+    Friend WithEvents Btn_Login As Button
+    Friend WithEvents Btn_SignUp As Button
+    Friend WithEvents Btn_Exit As Button
 
 End Class
