@@ -41,7 +41,7 @@ Partial Class SignUp
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(106, 32)
@@ -50,7 +50,7 @@ Partial Class SignUp
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(66, 86)
         Label2.Name = "Label2"
         Label2.Size = New Size(94, 25)
@@ -59,7 +59,7 @@ Partial Class SignUp
         ' 
         ' Text_FirstName
         ' 
-        Text_FirstName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_FirstName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Text_FirstName.Location = New Point(66, 114)
         Text_FirstName.Name = "Text_FirstName"
         Text_FirstName.Size = New Size(299, 30)
@@ -67,7 +67,7 @@ Partial Class SignUp
         ' 
         ' Label3
         ' 
-        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(66, 147)
         Label3.Name = "Label3"
         Label3.Size = New Size(94, 25)
@@ -76,7 +76,7 @@ Partial Class SignUp
         ' 
         ' Text_LastName
         ' 
-        Text_LastName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_LastName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Text_LastName.Location = New Point(66, 175)
         Text_LastName.Name = "Text_LastName"
         Text_LastName.Size = New Size(299, 30)
@@ -84,7 +84,7 @@ Partial Class SignUp
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(66, 208)
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 25)
@@ -93,7 +93,7 @@ Partial Class SignUp
         ' 
         ' Text_Email
         ' 
-        Text_Email.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Email.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Text_Email.Location = New Point(66, 236)
         Text_Email.Name = "Text_Email"
         Text_Email.Size = New Size(299, 30)
@@ -101,7 +101,7 @@ Partial Class SignUp
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label5.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(66, 269)
         Label5.Name = "Label5"
         Label5.Size = New Size(94, 25)
@@ -110,7 +110,7 @@ Partial Class SignUp
         ' 
         ' Text_Password
         ' 
-        Text_Password.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Password.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Text_Password.Location = New Point(66, 297)
         Text_Password.Name = "Text_Password"
         Text_Password.Size = New Size(299, 30)
@@ -118,7 +118,7 @@ Partial Class SignUp
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(66, 330)
         Label6.Name = "Label6"
         Label6.Size = New Size(94, 25)
@@ -127,7 +127,7 @@ Partial Class SignUp
         ' 
         ' Text_Contact
         ' 
-        Text_Contact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Contact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Text_Contact.Location = New Point(66, 358)
         Text_Contact.Name = "Text_Contact"
         Text_Contact.Size = New Size(299, 30)
@@ -135,7 +135,7 @@ Partial Class SignUp
         ' 
         ' Btn_Enter
         ' 
-        Btn_Enter.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Btn_Enter.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Enter.Location = New Point(266, 406)
         Btn_Enter.Name = "Btn_Enter"
         Btn_Enter.Size = New Size(99, 31)
@@ -145,7 +145,7 @@ Partial Class SignUp
         ' 
         ' Btn_Back
         ' 
-        Btn_Back.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Btn_Back.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Back.Location = New Point(61, 406)
         Btn_Back.Name = "Btn_Back"
         Btn_Back.Size = New Size(99, 31)
@@ -157,7 +157,7 @@ Partial Class SignUp
         ' 
         Status_Text.BackColor = SystemColors.Control
         Status_Text.BorderStyle = BorderStyle.None
-        Status_Text.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Status_Text.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Status_Text.Location = New Point(89, 44)
         Status_Text.Name = "Status_Text"
         Status_Text.Size = New Size(250, 17)
@@ -165,7 +165,7 @@ Partial Class SignUp
         ' 
         ' Label_Status
         ' 
-        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label_Status.Location = New Point(66, 44)
         Label_Status.Name = "Label_Status"
         Label_Status.Size = New Size(299, 27)

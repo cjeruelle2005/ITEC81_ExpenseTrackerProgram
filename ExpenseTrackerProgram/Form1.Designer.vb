@@ -23,7 +23,7 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label1 = New Label()
-        Text_User = New TextBox()
+        Text_Email = New TextBox()
         Label2 = New Label()
         Text_Password = New TextBox()
         Btn_Login = New Button()
@@ -40,13 +40,13 @@ Partial Class LoginForm
         Label1.TabIndex = 0
         Label1.Text = "User"
         ' 
-        ' Text_User
+        ' Text_Email
         ' 
-        Text_User.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_User.Location = New Point(75, 203)
-        Text_User.Name = "Text_User"
-        Text_User.Size = New Size(299, 34)
-        Text_User.TabIndex = 1
+        Text_Email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Email.Location = New Point(75, 203)
+        Text_Email.Name = "Text_Email"
+        Text_Email.Size = New Size(299, 34)
+        Text_Email.TabIndex = 1
         ' 
         ' Label2
         ' 
@@ -111,7 +111,7 @@ Partial Class LoginForm
         Controls.Add(Btn_Login)
         Controls.Add(Text_Password)
         Controls.Add(Label2)
-        Controls.Add(Text_User)
+        Controls.Add(Text_Email)
         Controls.Add(Label1)
         ForeColor = SystemColors.InfoText
         Name = "LoginForm"
@@ -121,7 +121,7 @@ Partial Class LoginForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Text_User As TextBox
+    Friend WithEvents Text_Email As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Text_Password As TextBox
     Friend WithEvents Btn_Login As Button
