@@ -1,4 +1,8 @@
-﻿Public Class SignUp
+﻿
+Imports System.Data.Sql
+Imports System.Data.SqlClient
+Imports Microsoft.Data.SqlClient
+Public Class SignUp
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Enter.Click
         Dim firstName As String
         Dim lastName As String
@@ -17,6 +21,7 @@
             Label_Status.Text = "Please fill in all fields."
             Exit Sub
         End If
+
         Label_Status.ForeColor = Color.Green
         Label_Status.Text = "Sign up successful."
     End Sub
@@ -27,4 +32,5 @@
         GoBack.Show()
         Me.Hide()
     End Sub
+
 End Class

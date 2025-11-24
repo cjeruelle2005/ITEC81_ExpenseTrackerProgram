@@ -8,4 +8,8 @@
         GoSignUp.Show()
         Me.Hide()
     End Sub
+
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
