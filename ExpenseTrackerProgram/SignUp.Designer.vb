@@ -35,12 +35,13 @@ Partial Class SignUp
         Text_Contact = New TextBox()
         Btn_Enter = New Button()
         Btn_Back = New Button()
+        Status_Text = New TextBox()
         Label_Status = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(106, 32)
@@ -49,8 +50,8 @@ Partial Class SignUp
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(65, 66)
+        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Location = New Point(66, 86)
         Label2.Name = "Label2"
         Label2.Size = New Size(94, 25)
         Label2.TabIndex = 2
@@ -58,16 +59,16 @@ Partial Class SignUp
         ' 
         ' Text_FirstName
         ' 
-        Text_FirstName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_FirstName.Location = New Point(65, 94)
+        Text_FirstName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_FirstName.Location = New Point(66, 114)
         Text_FirstName.Name = "Text_FirstName"
         Text_FirstName.Size = New Size(299, 30)
         Text_FirstName.TabIndex = 3
         ' 
         ' Label3
         ' 
-        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(65, 127)
+        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label3.Location = New Point(66, 147)
         Label3.Name = "Label3"
         Label3.Size = New Size(94, 25)
         Label3.TabIndex = 4
@@ -75,16 +76,16 @@ Partial Class SignUp
         ' 
         ' Text_LastName
         ' 
-        Text_LastName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_LastName.Location = New Point(65, 155)
+        Text_LastName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_LastName.Location = New Point(66, 175)
         Text_LastName.Name = "Text_LastName"
         Text_LastName.Size = New Size(299, 30)
         Text_LastName.TabIndex = 5
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(65, 188)
+        Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Location = New Point(66, 208)
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 25)
         Label4.TabIndex = 6
@@ -92,16 +93,16 @@ Partial Class SignUp
         ' 
         ' Text_Email
         ' 
-        Text_Email.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Email.Location = New Point(65, 216)
+        Text_Email.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Email.Location = New Point(66, 236)
         Text_Email.Name = "Text_Email"
         Text_Email.Size = New Size(299, 30)
         Text_Email.TabIndex = 7
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(65, 249)
+        Label5.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label5.Location = New Point(66, 269)
         Label5.Name = "Label5"
         Label5.Size = New Size(94, 25)
         Label5.TabIndex = 8
@@ -109,16 +110,16 @@ Partial Class SignUp
         ' 
         ' Text_Password
         ' 
-        Text_Password.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Password.Location = New Point(65, 277)
+        Text_Password.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Password.Location = New Point(66, 297)
         Text_Password.Name = "Text_Password"
         Text_Password.Size = New Size(299, 30)
         Text_Password.TabIndex = 9
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(65, 310)
+        Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label6.Location = New Point(66, 330)
         Label6.Name = "Label6"
         Label6.Size = New Size(94, 25)
         Label6.TabIndex = 10
@@ -126,16 +127,16 @@ Partial Class SignUp
         ' 
         ' Text_Contact
         ' 
-        Text_Contact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Contact.Location = New Point(65, 338)
+        Text_Contact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Text_Contact.Location = New Point(66, 358)
         Text_Contact.Name = "Text_Contact"
         Text_Contact.Size = New Size(299, 30)
         Text_Contact.TabIndex = 11
         ' 
         ' Btn_Enter
         ' 
-        Btn_Enter.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Enter.Location = New Point(265, 386)
+        Btn_Enter.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Btn_Enter.Location = New Point(266, 406)
         Btn_Enter.Name = "Btn_Enter"
         Btn_Enter.Size = New Size(99, 31)
         Btn_Enter.TabIndex = 12
@@ -144,21 +145,32 @@ Partial Class SignUp
         ' 
         ' Btn_Back
         ' 
-        Btn_Back.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Back.Location = New Point(60, 386)
+        Btn_Back.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Btn_Back.Location = New Point(61, 406)
         Btn_Back.Name = "Btn_Back"
         Btn_Back.Size = New Size(99, 31)
         Btn_Back.TabIndex = 13
         Btn_Back.Text = "BACK"
         Btn_Back.UseVisualStyleBackColor = True
         ' 
+        ' Status_Text
+        ' 
+        Status_Text.BackColor = SystemColors.Control
+        Status_Text.BorderStyle = BorderStyle.None
+        Status_Text.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Status_Text.Location = New Point(89, 44)
+        Status_Text.Name = "Status_Text"
+        Status_Text.Size = New Size(250, 17)
+        Status_Text.TabIndex = 14
+        ' 
         ' Label_Status
         ' 
-        Label_Status.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label_Status.Location = New Point(90, 41)
+        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label_Status.Location = New Point(66, 44)
         Label_Status.Name = "Label_Status"
-        Label_Status.Size = New Size(225, 19)
-        Label_Status.TabIndex = 14
+        Label_Status.Size = New Size(299, 27)
+        Label_Status.TabIndex = 15
+        Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' SignUp
         ' 
@@ -166,6 +178,7 @@ Partial Class SignUp
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(449, 450)
         Controls.Add(Label_Status)
+        Controls.Add(Status_Text)
         Controls.Add(Btn_Back)
         Controls.Add(Btn_Enter)
         Controls.Add(Text_Contact)
@@ -198,5 +211,6 @@ Partial Class SignUp
     Friend WithEvents Text_Contact As TextBox
     Friend WithEvents Btn_Enter As Button
     Friend WithEvents Btn_Back As Button
+    Friend WithEvents Status_Text As TextBox
     Friend WithEvents Label_Status As Label
 End Class
