@@ -34,7 +34,7 @@ Partial Class LoginForm
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label1.Location = New Point(75, 178)
         Label1.Name = "Label1"
         Label1.Size = New Size(66, 25)
@@ -43,7 +43,7 @@ Partial Class LoginForm
         ' 
         ' Text_Email
         ' 
-        Text_Email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Text_Email.Location = New Point(75, 204)
         Text_Email.Margin = New Padding(3, 4, 3, 4)
         Text_Email.Name = "Text_Email"
@@ -53,7 +53,7 @@ Partial Class LoginForm
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label2.Location = New Point(75, 249)
         Label2.Name = "Label2"
         Label2.Size = New Size(89, 22)
@@ -62,7 +62,7 @@ Partial Class LoginForm
         ' 
         ' Text_Password
         ' 
-        Text_Password.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Password.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Text_Password.Location = New Point(75, 274)
         Text_Password.Margin = New Padding(3, 4, 3, 4)
         Text_Password.Name = "Text_Password"
@@ -72,7 +72,7 @@ Partial Class LoginForm
         ' Btn_Login
         ' 
         Btn_Login.BackColor = SystemColors.ButtonHighlight
-        Btn_Login.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Login.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Btn_Login.Location = New Point(75, 332)
         Btn_Login.Margin = New Padding(3, 4, 3, 4)
         Btn_Login.Name = "Btn_Login"
@@ -84,7 +84,7 @@ Partial Class LoginForm
         ' Btn_SignUp
         ' 
         Btn_SignUp.BackColor = SystemColors.ButtonHighlight
-        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Btn_SignUp.Location = New Point(185, 332)
         Btn_SignUp.Margin = New Padding(3, 4, 3, 4)
         Btn_SignUp.Name = "Btn_SignUp"
@@ -96,7 +96,7 @@ Partial Class LoginForm
         ' Btn_Exit
         ' 
         Btn_Exit.BackColor = Color.Tomato
-        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Btn_Exit.ForeColor = SystemColors.InfoText
         Btn_Exit.Location = New Point(299, 332)
         Btn_Exit.Margin = New Padding(3, 4, 3, 4)
@@ -108,7 +108,7 @@ Partial Class LoginForm
         ' 
         ' Label_Status
         ' 
-        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label_Status.Location = New Point(75, 311)
         Label_Status.Name = "Label_Status"
         Label_Status.Size = New Size(299, 18)
@@ -129,7 +129,7 @@ Partial Class LoginForm
         Controls.Add(Label2)
         Controls.Add(Text_Email)
         Controls.Add(Label1)
-        Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
         ForeColor = SystemColors.InfoText
         Margin = New Padding(3, 4, 3, 4)
         Name = "LoginForm"

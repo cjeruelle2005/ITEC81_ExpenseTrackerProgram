@@ -49,4 +49,7 @@ Public Class LoginForm
         Me.Hide()
     End Sub
 
+    Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click
+        Me.Close()
+    End Sub
 End Class
