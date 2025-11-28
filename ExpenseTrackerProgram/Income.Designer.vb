@@ -27,9 +27,16 @@ Partial Class Income
         Btn_Expense = New Button()
         Btn_Income = New Button()
         Btn_Transaction = New Button()
+        Label4 = New Label()
+        Combo_Category = New ComboBox()
+        Label5 = New Label()
+        Text_incomeAmount = New TextBox()
+        Label6 = New Label()
+        Text_Description = New TextBox()
+        Button1 = New Button()
         Label2 = New Label()
-        Label3 = New Label()
-        DateTimePicker1 = New DateTimePicker()
+        Combo_Source = New ComboBox()
+        Label_Status = New Label()
         SuspendLayout()
         ' 
         ' Label1
@@ -93,39 +100,113 @@ Partial Class Income
         Btn_Transaction.Text = "TRANSACTION"
         Btn_Transaction.UseVisualStyleBackColor = False
         ' 
+        ' Label4
+        ' 
+        Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(250, 248)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(144, 20)
+        Label4.TabIndex = 13
+        Label4.Text = "CATEGORY"
+        ' 
+        ' Combo_Category
+        ' 
+        Combo_Category.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Combo_Category.FormattingEnabled = True
+        Combo_Category.Items.AddRange(New Object() {"Allowance", "Award", "Bonus", "Investment", "Lottery", "Salary", "Tips", "Others"})
+        Combo_Category.Location = New Point(250, 271)
+        Combo_Category.Name = "Combo_Category"
+        Combo_Category.Size = New Size(332, 33)
+        Combo_Category.TabIndex = 14
+        ' 
+        ' Label5
+        ' 
+        Label5.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(250, 115)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(110, 20)
+        Label5.TabIndex = 15
+        Label5.Text = "AMOUNT"
+        ' 
+        ' Text_incomeAmount
+        ' 
+        Text_incomeAmount.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_incomeAmount.Location = New Point(250, 138)
+        Text_incomeAmount.Name = "Text_incomeAmount"
+        Text_incomeAmount.Size = New Size(332, 30)
+        Text_incomeAmount.TabIndex = 16
+        ' 
+        ' Label6
+        ' 
+        Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(250, 323)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(155, 20)
+        Label6.TabIndex = 17
+        Label6.Text = "DESCRIPTION"
+        ' 
+        ' Text_Description
+        ' 
+        Text_Description.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Description.Location = New Point(250, 346)
+        Text_Description.Name = "Text_Description"
+        Text_Description.Size = New Size(332, 27)
+        Text_Description.TabIndex = 18
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = SystemColors.ButtonHighlight
+        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(328, 390)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(141, 35)
+        Button1.TabIndex = 19
+        Button1.Text = "SUBMIT"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(27, 111)
+        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(250, 181)
         Label2.Name = "Label2"
-        Label2.Size = New Size(63, 20)
-        Label2.TabIndex = 10
-        Label2.Text = "DATE"
+        Label2.Size = New Size(103, 20)
+        Label2.TabIndex = 20
+        Label2.Text = "SOURCE"
         ' 
-        ' Label3
+        ' Combo_Source
         ' 
-        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(27, 131)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(184, 23)
-        Label3.TabIndex = 11
-        Label3.Text = "YYYY-MM-DD"
+        Combo_Source.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Combo_Source.FormattingEnabled = True
+        Combo_Source.Items.AddRange(New Object() {"Company Salary", "Part-Time Job", "Online Selling", "Freelance Project", "Commission"})
+        Combo_Source.Location = New Point(250, 203)
+        Combo_Source.Name = "Combo_Source"
+        Combo_Source.Size = New Size(332, 33)
+        Combo_Source.TabIndex = 21
         ' 
-        ' DateTimePicker1
+        ' Label_Status
         ' 
-        DateTimePicker1.Location = New Point(216, 128)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(17, 27)
-        DateTimePicker1.TabIndex = 12
+        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_Status.Location = New Point(250, 88)
+        Label_Status.Name = "Label_Status"
+        Label_Status.Size = New Size(332, 27)
+        Label_Status.TabIndex = 22
+        Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Income
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(DateTimePicker1)
-        Controls.Add(Label3)
+        Controls.Add(Label_Status)
+        Controls.Add(Combo_Source)
         Controls.Add(Label2)
+        Controls.Add(Button1)
+        Controls.Add(Text_Description)
+        Controls.Add(Label6)
+        Controls.Add(Text_incomeAmount)
+        Controls.Add(Label5)
+        Controls.Add(Combo_Category)
+        Controls.Add(Label4)
         Controls.Add(Btn_Statistic)
         Controls.Add(Btn_Expense)
         Controls.Add(Btn_Income)
@@ -134,6 +215,7 @@ Partial Class Income
         Name = "Income"
         Text = "Income"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
@@ -141,7 +223,14 @@ Partial Class Income
     Friend WithEvents Btn_Expense As Button
     Friend WithEvents Btn_Income As Button
     Friend WithEvents Btn_Transaction As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Combo_Category As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Text_incomeAmount As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Text_Description As TextBox
+    Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Combo_Source As ComboBox
+    Friend WithEvents Label_Status As Label
 End Class
