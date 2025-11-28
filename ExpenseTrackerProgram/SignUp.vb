@@ -24,23 +24,31 @@ Public Class SignUp
             End If
 
             ' Check if password already exists
-            Dim checkCommand As New SqlCommand("SELECT COUNT(*) FROM User_TB WHERE Passcode = @Passcode", connection)
+            Dim checkCommand As New SqlCommand("SELECT COUNT(*) FROM UserTB WHERE Passcode = @Passcode", connection)
             checkCommand.Parameters.AddWithValue("@Passcode", password)
             Dim count As Integer = Convert.ToInt32(checkCommand.ExecuteScalar())
 
+            ' check if password is already used
             If count > 0 Then
                 Label_Status.ForeColor = Color.Red
                 Label_Status.Text = "Password is already used."
                 Exit Sub
             End If
 
+            ' check password length
+            If password.Length < 8 Then
+                Label_Status.ForeColor = Color.Red
+                Label_Status.Text = "Password must be at least 8 characters long."
+                Exit Sub
+            End If
+
             ' Insert new user
-            Dim insertCommand As New SqlCommand("INSERT INTO User_TB (FirstName, LastName, Email, Passcode, Contact) VALUES (@FirstName, @LastName, @Email, @Passcode, @Contact)", connection)
+            Dim insertCommand As New SqlCommand("INSERT INTO UserTB (FirstName, LastName, Email, Passcode, ContactNumber) VALUES (@FirstName, @LastName, @Email, @Passcode, @ContactNumber)", connection)
             insertCommand.Parameters.AddWithValue("@FirstName", firstName)
             insertCommand.Parameters.AddWithValue("@LastName", lastName)
             insertCommand.Parameters.AddWithValue("@Email", email)
             insertCommand.Parameters.AddWithValue("@Passcode", password)
-            insertCommand.Parameters.AddWithValue("@Contact", contact)
+            insertCommand.Parameters.AddWithValue("@ContactNumber", contact)
             insertCommand.ExecuteNonQuery()
 
             ' Show success message

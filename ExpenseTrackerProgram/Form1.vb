@@ -10,7 +10,7 @@ Public Class LoginForm
         Dim password As String = Text_Password.Text
 
         ' FIXED: Correct parameter names + correct SQL syntax
-        Dim query As String = "SELECT COUNT(*) FROM User_TB WHERE Email = @Email AND Passcode = @Passcode"
+        Dim query As String = "SELECT COUNT(*) FROM UserTB WHERE Email = @Email AND Passcode = @Passcode"
 
         Using con As New SqlConnection(connectionString)
             Using cmd As New SqlCommand(query, con)

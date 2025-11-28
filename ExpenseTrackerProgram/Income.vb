@@ -6,24 +6,28 @@ Public Class Income
         Label_Status.Text = ""
 
         Try
+            Dim incomeText As String = Text_incomeAmount.Text
+            Dim incomeSource As String = Combo_Source.Text
+            Dim incomeCategory As String = Combo_Category.Text
+
+            ' Check if any field is empty
+            If String.IsNullOrWhiteSpace(incomeText) Or String.IsNullOrWhiteSpace(incomeSource) Or String.IsNullOrWhiteSpace(incomeCategory) Then
+                Label_Status.ForeColor = Color.Red
+                Label_Status.Text = "Please fill in all fields."
+                Exit Sub
+            End If
+
             ' Validate amount
             Dim incomeAmount As Decimal
-            If Not Decimal.TryParse(Text_incomeAmount.Text, incomeAmount) Then
+            If Not Decimal.TryParse(incomeText, incomeAmount) Then
                 Label_Status.ForeColor = Color.Red
                 Label_Status.Text = "Please enter a valid amount."
                 Exit Sub
             End If
 
-            Dim incomeSource As String = Combo_Source.Text
-            Dim incomeCategory As String = Combo_Category.Text
-
-            If incomeAmount = "" Or incomeSource = "" Or incomeCategory = "" Then
-                Label_Status.ForeColor = Color.Red
-                Label_Status.Text = "Pleaser fill in all fields."
-            End If
-
+            ' Insert into database
             Dim connectionString As String = "Server=DESKTOP-M517C16\SQLEXPRESS;Database=ExpenseTracker_DB;Integrated Security=True;Encrypt=False;"
-            Dim query As String = "INSERT INTO Income_TB (Income_Amount, Income_Source, Income_Category) " &
+            Dim query As String = "INSERT INTO IncomeTB (Income_Amount, Income_Source, Income_Category) " &
                                   "VALUES (@Income_Amount, @Income_Source, @Income_Category)"
 
             Using connection As New SqlConnection(connectionString)
@@ -50,4 +54,3 @@ Public Class Income
         End Try
     End Sub
 End Class
-
