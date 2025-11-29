@@ -64,4 +64,16 @@ Public Class Expense
         End Try
 
     End Sub
+
+    Private Sub Btn_Income_Click(sender As Object, e As EventArgs) Handles Btn_Income.Click
+        Dim GoToIncome As New Income()
+        GoToIncome.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Transaction_Click(sender As Object, e As EventArgs) Handles Btn_Transaction.Click
+        Dim GoToTransaction As New Dashboard()
+        GoToTransaction.Show()
+        Me.Hide()
+    End Sub
 End Class

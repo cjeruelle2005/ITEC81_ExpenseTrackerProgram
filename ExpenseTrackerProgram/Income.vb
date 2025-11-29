@@ -66,4 +66,15 @@ Public Class Income
 
     End Sub
 
+    Private Sub Btn_Transaction_Click(sender As Object, e As EventArgs) Handles Btn_Transaction.Click
+        Dim GoToTransaction As New Dashboard()
+        GoToTransaction.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Statistic_Click(sender As Object, e As EventArgs) Handles Btn_Statistic.Click
+        Dim GoToStatistic As New Statistic()
+        GoToStatistic.Show()
+        Me.Hide()
+    End Sub
 End Class
