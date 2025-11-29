@@ -76,4 +76,12 @@ Public Class Expense
         GoToTransaction.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Text_Amount_TextChanged(sender As Object, e As EventArgs) Handles Text_Amount.TextChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

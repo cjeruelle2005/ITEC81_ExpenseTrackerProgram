@@ -37,6 +37,8 @@ Partial Class Expense
         Label1 = New Label()
         DateTimeExpense = New DateTimePicker()
         Text_Amount = New TextBox()
+        Label3 = New Label()
+        Text_Item = New TextBox()
         SuspendLayout()
         ' 
         ' Label_Status
@@ -53,7 +55,7 @@ Partial Class Expense
         Combo_Category.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Combo_Category.FormattingEnabled = True
         Combo_Category.Items.AddRange(New Object() {"Company Salary", "Part-Time Job", "Online Selling", "Freelance Project", "Commission"})
-        Combo_Category.Location = New Point(249, 199)
+        Combo_Category.Location = New Point(249, 248)
         Combo_Category.Name = "Combo_Category"
         Combo_Category.Size = New Size(332, 33)
         Combo_Category.TabIndex = 36
@@ -61,7 +63,7 @@ Partial Class Expense
         ' Label2
         ' 
         Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(249, 177)
+        Label2.Location = New Point(249, 225)
         Label2.Name = "Label2"
         Label2.Size = New Size(126, 20)
         Label2.TabIndex = 35
@@ -71,7 +73,7 @@ Partial Class Expense
         ' 
         Btn_Submit.BackColor = SystemColors.ButtonHighlight
         Btn_Submit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Submit.Location = New Point(327, 386)
+        Btn_Submit.Location = New Point(333, 399)
         Btn_Submit.Name = "Btn_Submit"
         Btn_Submit.Size = New Size(141, 35)
         Btn_Submit.TabIndex = 34
@@ -81,7 +83,7 @@ Partial Class Expense
         ' Text_Description
         ' 
         Text_Description.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Description.Location = New Point(249, 342)
+        Text_Description.Location = New Point(249, 363)
         Text_Description.Name = "Text_Description"
         Text_Description.Size = New Size(332, 30)
         Text_Description.TabIndex = 33
@@ -89,7 +91,7 @@ Partial Class Expense
         ' Label6
         ' 
         Label6.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(249, 319)
+        Label6.Location = New Point(249, 340)
         Label6.Name = "Label6"
         Label6.Size = New Size(155, 20)
         Label6.TabIndex = 32
@@ -107,7 +109,7 @@ Partial Class Expense
         ' Label4
         ' 
         Label4.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(249, 244)
+        Label4.Location = New Point(249, 284)
         Label4.Name = "Label4"
         Label4.Size = New Size(110, 20)
         Label4.TabIndex = 28
@@ -185,16 +187,35 @@ Partial Class Expense
         ' Text_Amount
         ' 
         Text_Amount.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Amount.Location = New Point(256, 276)
+        Text_Amount.Location = New Point(249, 307)
         Text_Amount.Name = "Text_Amount"
-        Text_Amount.Size = New Size(325, 30)
+        Text_Amount.Size = New Size(332, 30)
         Text_Amount.TabIndex = 39
+        ' 
+        ' Label3
+        ' 
+        Label3.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(249, 167)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(126, 20)
+        Label3.TabIndex = 40
+        Label3.Text = "ITEM"
+        ' 
+        ' Text_Item
+        ' 
+        Text_Item.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Item.Location = New Point(249, 190)
+        Text_Item.Name = "Text_Item"
+        Text_Item.Size = New Size(332, 30)
+        Text_Item.TabIndex = 41
         ' 
         ' Expense
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Text_Item)
+        Controls.Add(Label3)
         Controls.Add(Text_Amount)
         Controls.Add(DateTimeExpense)
         Controls.Add(Label_Status)
@@ -231,4 +252,6 @@ Partial Class Expense
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimeExpense As DateTimePicker
     Friend WithEvents Text_Amount As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Text_Item As TextBox
 End Class
