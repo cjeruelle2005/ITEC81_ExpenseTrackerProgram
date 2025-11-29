@@ -37,9 +37,9 @@ Partial Class LoginForm
         Label1.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(75, 178)
         Label1.Name = "Label1"
-        Label1.Size = New Size(66, 25)
+        Label1.Size = New Size(104, 25)
         Label1.TabIndex = 0
-        Label1.Text = "Email"
+        Label1.Text = "Username"
         ' 
         ' Text_Email
         ' 
@@ -66,13 +66,14 @@ Partial Class LoginForm
         Text_Password.Location = New Point(75, 274)
         Text_Password.Margin = New Padding(3, 4, 3, 4)
         Text_Password.Name = "Text_Password"
+        Text_Password.PasswordChar = "*"c
         Text_Password.Size = New Size(299, 34)
         Text_Password.TabIndex = 3
         ' 
         ' Btn_Login
         ' 
         Btn_Login.BackColor = SystemColors.ButtonHighlight
-        Btn_Login.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Login.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Login.Location = New Point(75, 332)
         Btn_Login.Margin = New Padding(3, 4, 3, 4)
         Btn_Login.Name = "Btn_Login"
@@ -84,7 +85,7 @@ Partial Class LoginForm
         ' Btn_SignUp
         ' 
         Btn_SignUp.BackColor = SystemColors.ButtonHighlight
-        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_SignUp.Location = New Point(185, 332)
         Btn_SignUp.Margin = New Padding(3, 4, 3, 4)
         Btn_SignUp.Name = "Btn_SignUp"
@@ -96,7 +97,7 @@ Partial Class LoginForm
         ' Btn_Exit
         ' 
         Btn_Exit.BackColor = Color.Tomato
-        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Exit.ForeColor = SystemColors.InfoText
         Btn_Exit.Location = New Point(299, 332)
         Btn_Exit.Margin = New Padding(3, 4, 3, 4)
@@ -117,7 +118,7 @@ Partial Class LoginForm
         ' 
         ' LoginForm
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
         ClientSize = New Size(464, 449)
@@ -129,7 +130,7 @@ Partial Class LoginForm
         Controls.Add(Label2)
         Controls.Add(Text_Email)
         Controls.Add(Label1)
-        Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.InfoText
         Margin = New Padding(3, 4, 3, 4)
         Name = "LoginForm"

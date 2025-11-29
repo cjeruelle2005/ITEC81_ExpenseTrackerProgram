@@ -89,7 +89,7 @@ Partial Class SignUp
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 25)
         Label4.TabIndex = 6
-        Label4.Text = "Email"
+        Label4.Text = "Username"
         ' 
         ' Text_Email
         ' 

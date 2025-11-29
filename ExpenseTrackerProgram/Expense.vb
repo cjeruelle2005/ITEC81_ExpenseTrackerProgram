@@ -1,49 +1,47 @@
 ﻿Imports System.Data.SqlClient
 Imports Microsoft.Data.SqlClient
 
-Public Class Income
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+Public Class Expense
+    Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         Label_Status.Text = ""
 
         Try
-            Dim incomeText As String = Text_incomeAmount.Text
-            Dim incomeSource As String = Combo_Source.Text
-            Dim incomeCategory As String = Combo_Category.Text
+            Dim categoryText As String = Combo_Category.Text
+            Dim amountText As String = Text_Amount.Text
+            Dim dateValue As DateTime = DateTimeExpense.Value
+            Dim descriptionText As String = Text_Description.Text
 
-            ' Check if any field is empty
-            If String.IsNullOrWhiteSpace(incomeText) Or
-               String.IsNullOrWhiteSpace(incomeSource) Or
-               String.IsNullOrWhiteSpace(incomeCategory) Then
+            ' Check if required fields are empty
+            If String.IsNullOrWhiteSpace(categoryText) Or
+               String.IsNullOrWhiteSpace(amountText) Then
 
                 Label_Status.ForeColor = Color.Red
-                Label_Status.Text = "Please fill in all fields."
+                Label_Status.Text = "Please fill in all required fields."
                 Exit Sub
             End If
 
             ' Validate amount
-            Dim incomeAmount As Decimal
-            If Not Decimal.TryParse(incomeText, incomeAmount) Then
+            Dim amountValue As Decimal
+            If Not Decimal.TryParse(amountText, amountValue) Then
                 Label_Status.ForeColor = Color.Red
                 Label_Status.Text = "Please enter a valid amount."
                 Exit Sub
             End If
 
+            ' Insert into database
             Dim connectionString As String =
                 "Server=DESKTOP-M517C16\SQLEXPRESS;Database=ExpenseTracker_DB;Integrated Security=True;Encrypt=False;"
 
             Dim query As String =
-                "INSERT INTO IncomeTB (Income_Amount, Income_Source, Income_Category, Users_ID)
-                 VALUES (@Income_Amount, @Income_Source, @Income_Category, @Users_ID)"
+                "INSERT INTO Expense_TB (Category, ExpenseAmount, Expense_Date, Users_ID) " &
+                "VALUES (@Category, @ExpenseAmount, @Expense_Date, @Users_ID)"
 
             Using connection As New SqlConnection(connectionString)
                 Using command As New SqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@Category", categoryText)
+                    command.Parameters.AddWithValue("@ExpenseAmount", amountValue)
+                    command.Parameters.AddWithValue("@Expense_Date", dateValue)
 
-                    command.Parameters.AddWithValue("@Income_Amount", incomeAmount)
-                    command.Parameters.AddWithValue("@Income_Source", incomeSource)
-                    command.Parameters.AddWithValue("@Income_Category", incomeCategory)
-
-                    ' ⭐ MUST MATCH YOUR SQL SERVER COLUMN EXACTLY:
                     command.Parameters.AddWithValue("@Users_ID", Users_ID)
 
                     connection.Open()
@@ -52,9 +50,10 @@ Public Class Income
             End Using
 
             ' Clear inputs
-            Text_incomeAmount.Clear()
-            Combo_Source.SelectedIndex = -1
             Combo_Category.SelectedIndex = -1
+            Text_Amount.Clear()
+            Text_Description.Clear()
+            DateTimeExpense.Value = DateTime.Now
 
             Label_Status.ForeColor = Color.Green
             Label_Status.Text = "Added"
@@ -65,5 +64,4 @@ Public Class Income
         End Try
 
     End Sub
-
 End Class

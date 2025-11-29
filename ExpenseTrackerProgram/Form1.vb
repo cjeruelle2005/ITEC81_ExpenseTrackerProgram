@@ -9,22 +9,23 @@ Public Class LoginForm
         Dim email As String = Text_Email.Text
         Dim password As String = Text_Password.Text
 
-        ' FIXED: Correct parameter names + correct SQL syntax
-        Dim query As String = "SELECT COUNT(*) FROM UserTB WHERE Email = @Email AND Passcode = @Passcode"
+        ' Get UserID instead of COUNT(*)
+        Dim query As String = "SELECT Users_ID FROM UserTB WHERE Email = @Email AND Passcode = @Passcode"
 
         Using con As New SqlConnection(connectionString)
             Using cmd As New SqlCommand(query, con)
 
-                ' FIXED: Correct parameters
                 cmd.Parameters.AddWithValue("@Email", email)
                 cmd.Parameters.AddWithValue("@Passcode", password)
 
                 con.Open()
 
-                Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Dim result = cmd.ExecuteScalar()
 
-                If result > 0 Then
-                    ' LOGIN SUCCESS
+                If result IsNot Nothing Then
+                    ' Save UserID globally
+                    Users_ID = CInt(result)
+
                     Label_Status.ForeColor = Color.Green
                     Label_Status.Text = "Login successful!"
 
@@ -33,10 +34,8 @@ Public Class LoginForm
                     Me.Hide()
 
                 Else
-                    ' LOGIN FAILED
                     Label_Status.ForeColor = Color.Red
                     Label_Status.Text = "Invalid email or password."
-
                 End If
             End Using
         End Using
