@@ -12,8 +12,8 @@ Public Class Income
             Dim incomeCategory As String = Combo_Category.Text
 
             ' Check if any field is empty
-            If String.IsNullOrWhiteSpace(incomeText) Or
-               String.IsNullOrWhiteSpace(incomeSource) Or
+            If String.IsNullOrWhiteSpace(incomeText) OrElse
+               String.IsNullOrWhiteSpace(incomeSource) OrElse
                String.IsNullOrWhiteSpace(incomeCategory) Then
 
                 Label_Status.ForeColor = Color.Red
@@ -29,29 +29,46 @@ Public Class Income
                 Exit Sub
             End If
 
+            ' Database connection
             Dim connectionString As String =
                 "Server=DESKTOP-M517C16\SQLEXPRESS;Database=ExpenseTracker_DB;Integrated Security=True;Encrypt=False;"
 
-            Dim query As String =
-                "INSERT INTO IncomeTB (Income_Amount, Income_Source, Income_Category, Users_ID)
-                 VALUES (@Income_Amount, @Income_Source, @Income_Category, @Users_ID)"
-
             Using connection As New SqlConnection(connectionString)
-                Using command As New SqlCommand(query, connection)
+                connection.Open()
 
+                ' -------------------------------
+                ' 1st INSERT → IncomeTB
+                ' -------------------------------
+                Dim query As String =
+                    "INSERT INTO IncomeTB (Income_Amount, Income_Source, Income_Category, Users_ID)
+                     VALUES (@Income_Amount, @Income_Source, @Income_Category, @Users_ID)"
+
+                Using command As New SqlCommand(query, connection)
                     command.Parameters.AddWithValue("@Income_Amount", incomeAmount)
                     command.Parameters.AddWithValue("@Income_Source", incomeSource)
                     command.Parameters.AddWithValue("@Income_Category", incomeCategory)
-
-                    ' ⭐ MUST MATCH YOUR SQL SERVER COLUMN EXACTLY:
                     command.Parameters.AddWithValue("@Users_ID", Users_ID)
 
-                    connection.Open()
                     command.ExecuteNonQuery()
                 End Using
-            End Using
 
-            ' Clear inputs
+                ' -------------------------------
+                ' 2nd INSERT → Transaction_TB
+                ' -------------------------------
+                Dim query2 As String =
+                    "INSERT INTO Transaction_TB (Category, Money_Added, Users_ID)
+                     VALUES (@Category, @Money_Added, @Users_ID)"
+
+                Using command2 As New SqlCommand(query2, connection)
+                    command2.Parameters.AddWithValue("@Category", incomeCategory)
+                    command2.Parameters.AddWithValue("@Money_Added", incomeAmount)
+                    command2.Parameters.AddWithValue("@Users_ID", Users_ID)
+                    command2.ExecuteNonQuery()
+                End Using
+
+            End Using  ' Connection closes here
+
+            ' Clear input fields
             Text_incomeAmount.Clear()
             Combo_Source.SelectedIndex = -1
             Combo_Category.SelectedIndex = -1
@@ -77,4 +94,5 @@ Public Class Income
         GoToStatistic.Show()
         Me.Hide()
     End Sub
+
 End Class
