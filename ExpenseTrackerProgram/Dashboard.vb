@@ -10,4 +10,8 @@
         GoToExpense.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label_Balance.Text = "Balance: " & SessionModule.Balance.ToString("C2")
+    End Sub
 End Class

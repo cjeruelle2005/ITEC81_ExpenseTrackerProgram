@@ -66,6 +66,17 @@ Public Class Expense
                     command2.ExecuteNonQuery()
                 End Using
             End Using
+
+            ' Update global balance
+            SessionModule.Balance -= amountValue
+
+            ' Update Dashboard label if open
+            For Each frm As Form In Application.OpenForms
+                If TypeOf frm Is Dashboard Then
+                    CType(frm, Dashboard).Label_Balance.Text = "Balance: " & SessionModule.Balance.ToString("C2")
+                End If
+            Next
+
             ' Clear inputs
             Combo_Category.SelectedIndex = -1
             Text_Amount.Clear()

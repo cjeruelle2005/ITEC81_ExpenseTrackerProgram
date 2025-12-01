@@ -52,9 +52,7 @@ Public Class Income
                     command.ExecuteNonQuery()
                 End Using
 
-                ' -------------------------------
-                ' 2nd INSERT → Transaction_TB
-                ' -------------------------------
+
                 Dim query2 As String =
                     "INSERT INTO Transaction_TB (Category, Money_Added, Users_ID)
                      VALUES (@Category, @Money_Added, @Users_ID)"
@@ -67,6 +65,16 @@ Public Class Income
                 End Using
 
             End Using  ' Connection closes here
+
+            ' Update global balance
+            SessionModule.Balance += incomeAmount
+
+            ' Update Dashboard label if open
+            For Each frm As Form In Application.OpenForms
+                If TypeOf frm Is Dashboard Then
+                    CType(frm, Dashboard).Label_Balance.Text = "Balance: " & SessionModule.Balance.ToString("C2")
+                End If
+            Next
 
             ' Clear input fields
             Text_incomeAmount.Clear()

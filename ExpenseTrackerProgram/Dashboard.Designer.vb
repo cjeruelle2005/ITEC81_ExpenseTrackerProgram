@@ -29,9 +29,9 @@ Partial Class Dashboard
         Btn_Expense = New Button()
         Btn_Statistic = New Button()
         Label2 = New Label()
-        Balance_Txt = New Label()
+        Label_Balance = New Label()
         Label3 = New Label()
-        Label4 = New Label()
+        Label_TotalSpend = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -115,15 +115,15 @@ Partial Class Dashboard
         Label2.TabIndex = 6
         Label2.Text = "Balance"
         ' 
-        ' Balance_Txt
+        ' Label_Balance
         ' 
-        Balance_Txt.AutoSize = True
-        Balance_Txt.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Balance_Txt.Location = New Point(130, 105)
-        Balance_Txt.Name = "Balance_Txt"
-        Balance_Txt.Size = New Size(50, 25)
-        Balance_Txt.TabIndex = 7
-        Balance_Txt.Text = "0.00"
+        Label_Balance.AutoSize = True
+        Label_Balance.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_Balance.Location = New Point(130, 105)
+        Label_Balance.Name = "Label_Balance"
+        Label_Balance.Size = New Size(50, 25)
+        Label_Balance.TabIndex = 7
+        Label_Balance.Text = "0.00"
         ' 
         ' Label3
         ' 
@@ -135,24 +135,24 @@ Partial Class Dashboard
         Label3.TabIndex = 8
         Label3.Text = "Money Spend"
         ' 
-        ' Label4
+        ' Label_TotalSpend
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(543, 105)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(50, 25)
-        Label4.TabIndex = 9
-        Label4.Text = "0.00"
+        Label_TotalSpend.AutoSize = True
+        Label_TotalSpend.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_TotalSpend.Location = New Point(543, 105)
+        Label_TotalSpend.Name = "Label_TotalSpend"
+        Label_TotalSpend.Size = New Size(50, 25)
+        Label_TotalSpend.TabIndex = 9
+        Label_TotalSpend.Text = "0.00"
         ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Label4)
+        Controls.Add(Label_TotalSpend)
         Controls.Add(Label3)
-        Controls.Add(Balance_Txt)
+        Controls.Add(Label_Balance)
         Controls.Add(Label2)
         Controls.Add(Btn_Statistic)
         Controls.Add(Btn_Expense)
@@ -174,7 +174,7 @@ Partial Class Dashboard
     Friend WithEvents Btn_Expense As Button
     Friend WithEvents Btn_Statistic As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Balance_Txt As Label
+    Friend WithEvents Label_Balance As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Label_TotalSpend As Label
 End Class
