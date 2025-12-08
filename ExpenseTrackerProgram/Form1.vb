@@ -49,8 +49,10 @@ Public Class LoginForm
                     Label_Status.Text = "Login successful!"
 
                     Dim dashboardForm As New Dashboard()
-                    dashboardForm.Show()
+                    dashboardForm.Location = Me.Location()
                     Me.Hide()
+                    dashboardForm.Show()
+
                 Else
                     Label_Status.ForeColor = Color.Red
                     Label_Status.Text = "Invalid email or password."
@@ -61,8 +63,9 @@ Public Class LoginForm
 
     Private Sub Btn_SignUp_Click(sender As Object, e As EventArgs) Handles Btn_SignUp.Click
         Dim signupForm As New SignUp()
-        signupForm.Show()
+        signupForm.Location = Me.Location()
         Me.Hide()
+        signupForm.Show()
     End Sub
 
     Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click
