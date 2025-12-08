@@ -114,5 +114,19 @@ Public Class Income
         transactionForm.Show()
     End Sub
 
+    Private Sub Btn_Expense_Click(sender As Object, e As EventArgs) Handles Btn_Expense.Click
+        Dim GoToExpense As New Expense()
+        GoToExpense.Location = Me.Location()
+        Me.Hide()
+        GoToExpense.ShowDialog()
+    End Sub
+
+    Private Sub Btn_Statistic_Click(sender As Object, e As EventArgs) Handles Btn_Statistic.Click
+        Dim GoToStatistic As New Statistic()
+        GoToStatistic.Location = Me.Location()
+        Me.Hide()
+        GoToStatistic.ShowDialog()
+    End Sub
+
     ' ... other buttons unchanged ...
 End Class

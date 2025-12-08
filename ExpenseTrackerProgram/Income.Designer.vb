@@ -186,12 +186,11 @@ Partial Class Income
         ' 
         ' Label_Status
         ' 
-        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_Status.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label_Status.Location = New Point(432, 184)
         Label_Status.Name = "Label_Status"
         Label_Status.Size = New Size(431, 31)
         Label_Status.TabIndex = 22
-        Label_Status.Text = "hgh"
         Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Btn_Back

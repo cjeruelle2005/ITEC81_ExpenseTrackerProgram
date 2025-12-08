@@ -52,15 +52,16 @@ Public Class Expense
                     command1.ExecuteNonQuery()
                 End Using
 
-                ' INSERT INTO Transaction_TB
+                ' INSERT INTO Transaction_TB (INCLUDING DESCRIPTION)
                 Dim query2 As String =
-                    "INSERT INTO Transaction_TB (Item, Category, Money_Spend, Users_ID)
-                     VALUES (@Item, @Category, @Money_Spend, @Users_ID)"
+                    "INSERT INTO Transaction_TB (Item, Category, Money_Spend, Descriptions, Users_ID)
+                     VALUES (@Item, @Category, @Money_Spend, @Descriptions, @Users_ID)"
 
                 Using command2 As New SqlCommand(query2, connection)
                     command2.Parameters.AddWithValue("@Item", ItemName)
                     command2.Parameters.AddWithValue("@Category", categoryText)
                     command2.Parameters.AddWithValue("@Money_Spend", amountValue)
+                    command2.Parameters.AddWithValue("@Descriptions", description)   ' <-- FIXED
                     command2.Parameters.AddWithValue("@Users_ID", Users_ID)
                     command2.ExecuteNonQuery()
                 End Using
