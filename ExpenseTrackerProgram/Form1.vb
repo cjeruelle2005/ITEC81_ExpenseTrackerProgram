@@ -4,27 +4,7 @@ Imports Microsoft.Data.SqlClient
 Public Class LoginForm
 
     Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
-        Dim email As String = Text_Email.Text
-        Dim password As String = Text_Password.Text
-
-        ' Reset ProgressBar
-        Progress_Bar.Value = 0
-        Progress_Bar.Visible = True
-
-        ' Start login process using a timer to simulate progress
-        Timer1.Interval = 50 ' Adjust speed of progress
-        Timer1.Start()
-    End Sub
-
-    ' Timer Tick event to increment progress bar
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If Progress_Bar.Value < 100 Then
-            Progress_Bar.Increment(2) ' Increase by 5 each tick
-        Else
-            Timer1.Stop()
-            Progress_Bar.Visible = False
-            PerformLogin()
-        End If
+        PerformLogin()
     End Sub
 
     ' Actual login logic
@@ -49,6 +29,7 @@ Public Class LoginForm
                     Label_Status.Text = "Login successful!"
 
                     Dim dashboardForm As New Dashboard()
+                    dashboardForm.StartPosition = FormStartPosition.CenterScreen
                     dashboardForm.Location = Me.Location()
                     Me.Hide()
                     dashboardForm.Show()
@@ -63,6 +44,7 @@ Public Class LoginForm
 
     Private Sub Btn_SignUp_Click(sender As Object, e As EventArgs) Handles Btn_SignUp.Click
         Dim signupForm As New SignUp()
+        signupForm.StartPosition = FormStartPosition.CenterScreen
         signupForm.Location = Me.Location()
         Me.Hide()
         signupForm.Show()
@@ -72,4 +54,12 @@ Public Class LoginForm
         Me.Close()
     End Sub
 
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
+    End Sub
+
+    Private Sub Label_Status_Click(sender As Object, e As EventArgs) Handles Label_Status.Click
+
+    End Sub
 End Class

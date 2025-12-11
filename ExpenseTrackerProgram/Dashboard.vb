@@ -15,8 +15,10 @@ Public Class Dashboard
     End Class
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
         ' Configure FlowLayoutPanel
-        FLP_Transaction.Size = New Size(1000, 350)
+        FLP_Transaction.Size = New Size(1420, 350)
         FLP_Transaction.AutoScroll = True
         FLP_Transaction.FlowDirection = FlowDirection.TopDown
         FLP_Transaction.WrapContents = False
@@ -327,22 +329,37 @@ Public Class Dashboard
     End Sub
 
     ' Navigation buttons and search/date filter
+
+    ' FIXED — Income
     Private Sub Btn_Income_Click(sender As Object, e As EventArgs) Handles Btn_Income.Click
         Dim GoToIncome As New Income()
-        GoToIncome.Location = Me.Location()
-        Me.Hide()
-        GoToIncome.ShowDialog()
-        LoadTransactions(Search_Bar.Text.Trim(), T_DateTime.Value.Date)
-        UpdateBalances()
+        GoToIncome.StartPosition = FormStartPosition.CenterScreen
+        GoToIncome.Show()
+        Me.Close()
     End Sub
 
+    ' FIXED — Expense
     Private Sub Btn_Expense_Click(sender As Object, e As EventArgs) Handles Btn_Expense.Click
         Dim GoToExpense As New Expense()
-        GoToExpense.Location = Me.Location()
-        Me.Hide()
-        GoToExpense.ShowDialog()
-        LoadTransactions(Search_Bar.Text.Trim(), T_DateTime.Value.Date)
-        UpdateBalances()
+        GoToExpense.StartPosition = FormStartPosition.CenterScreen
+        GoToExpense.Show()
+        Me.Close()
+    End Sub
+
+    ' FIXED — Back
+    Private Sub Btn_Back_Click(sender As Object, e As EventArgs) Handles Btn_Back.Click
+        Dim Logout As New LoginForm()
+        Logout.StartPosition = FormStartPosition.CenterScreen
+        Logout.Show()
+        Me.Close()
+    End Sub
+
+    ' FIXED — Statistic
+    Private Sub Btn_Statistic_Click(sender As Object, e As EventArgs) Handles Btn_Statistic.Click
+        Dim GoToStatistic As New Statistic()
+        GoToStatistic.StartPosition = FormStartPosition.CenterScreen
+        GoToStatistic.Show()
+        Me.Close()
     End Sub
 
     Private Sub Search_Bar_TextChanged(sender As Object, e As EventArgs) Handles Search_Bar.TextChanged

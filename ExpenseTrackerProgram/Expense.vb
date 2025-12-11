@@ -3,6 +3,11 @@ Imports Microsoft.Data.SqlClient
 
 Public Class Expense
 
+    Private Sub Expense_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
+    End Sub
+
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         Label_Status.Text = ""
 
@@ -46,7 +51,7 @@ Public Class Expense
                     command1.Parameters.AddWithValue("@Item", ItemName)
                     command1.Parameters.AddWithValue("@Category", categoryText)
                     command1.Parameters.AddWithValue("@ExpenseAmount", amountValue)
-                    command1.Parameters.AddWithValue("@Descriptions", description)   ' Optional
+                    command1.Parameters.AddWithValue("@Descriptions", description)
                     command1.Parameters.AddWithValue("@Expense_Date", dateValue)
                     command1.Parameters.AddWithValue("@Users_ID", Users_ID)
                     command1.ExecuteNonQuery()
@@ -61,10 +66,11 @@ Public Class Expense
                     command2.Parameters.AddWithValue("@Item", ItemName)
                     command2.Parameters.AddWithValue("@Category", categoryText)
                     command2.Parameters.AddWithValue("@Money_Spend", amountValue)
-                    command2.Parameters.AddWithValue("@Descriptions", description)   ' <-- FIXED
+                    command2.Parameters.AddWithValue("@Descriptions", description)
                     command2.Parameters.AddWithValue("@Users_ID", Users_ID)
                     command2.ExecuteNonQuery()
                 End Using
+
             End Using
 
             ' Update Dashboard Balances
@@ -125,37 +131,47 @@ Public Class Expense
         End Try
     End Sub
 
-    ' NAVIGATION BUTTONS
+    ' -----------------------------------
+    '       FIXED NAVIGATION BUTTONS
+    ' -----------------------------------
+
     Private Sub Btn_Income_Click(sender As Object, e As EventArgs) Handles Btn_Income.Click
-        Dim f As New Income()
-        f.Location = Me.Location()
-        Me.Hide()
-        f.Show()
+        Dim GoToIncome As New Income()
+        GoToIncome.StartPosition = FormStartPosition.CenterScreen
+        GoToIncome.Show()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Transaction_Click(sender As Object, e As EventArgs) Handles Btn_Transaction.Click
-        Dim f As New Dashboard()
-        f.Location = Me.Location()
-        Me.Hide()
-        f.Show()
+        Dim GoToTransaction As New Dashboard()
+        GoToTransaction.StartPosition = FormStartPosition.CenterScreen
+        GoToTransaction.Show()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Back_Click(sender As Object, e As EventArgs) Handles Btn_Back.Click
-        Dim f As New LoginForm()
-        f.Location = Me.Location()
-        Me.Hide()
-        f.Show()
+        Dim Logout As New LoginForm()
+        Logout.StartPosition = FormStartPosition.CenterScreen
+        Logout.Show()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Statistic_Click(sender As Object, e As EventArgs) Handles Btn_Statistic.Click
-        Dim f As New Statistic()
-        f.Location = Me.Location()
-        Me.Hide()
-        f.Show()
+        Dim GoToStatistic As New Statistic()
+        GoToStatistic.StartPosition = FormStartPosition.CenterScreen
+        GoToStatistic.Show()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Expense_Click(sender As Object, e As EventArgs) Handles Btn_Expense.Click
-        ' Already here
+        ' Already in Expense page
     End Sub
 
+    Private Sub Combo_Category_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Category.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label_Status_Click(sender As Object, e As EventArgs) Handles Label_Status.Click
+
+    End Sub
 End Class

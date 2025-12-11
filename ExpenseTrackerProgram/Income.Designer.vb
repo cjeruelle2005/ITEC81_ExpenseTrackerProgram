@@ -22,6 +22,7 @@ Partial Class Income
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Income))
         Label1 = New Label()
         Btn_Statistic = New Button()
         Btn_Expense = New Button()
@@ -42,37 +43,37 @@ Partial Class Income
         ' 
         ' Label1
         ' 
-        Label1.BackColor = Color.Firebrick
-        Label1.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold)
+        Label1.BackColor = Color.Purple
+        Label1.Font = New Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Info
         Label1.ImageAlign = ContentAlignment.MiddleRight
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(1252, 155)
+        Label1.Size = New Size(1902, 162)
         Label1.TabIndex = 2
         Label1.Text = "INCOME"
         Label1.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Btn_Statistic
         ' 
-        Btn_Statistic.BackColor = SystemColors.ButtonShadow
-        Btn_Statistic.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold)
+        Btn_Statistic.BackColor = SystemColors.ButtonFace
+        Btn_Statistic.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold)
         Btn_Statistic.ForeColor = SystemColors.ControlText
-        Btn_Statistic.Location = New Point(907, 107)
+        Btn_Statistic.Location = New Point(1271, 113)
         Btn_Statistic.Name = "Btn_Statistic"
-        Btn_Statistic.Size = New Size(273, 47)
+        Btn_Statistic.Size = New Size(395, 49)
         Btn_Statistic.TabIndex = 9
         Btn_Statistic.Text = "STATISTIC"
         Btn_Statistic.UseVisualStyleBackColor = False
         ' 
         ' Btn_Expense
         ' 
-        Btn_Expense.BackColor = SystemColors.ButtonShadow
-        Btn_Expense.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold)
+        Btn_Expense.BackColor = SystemColors.ButtonFace
+        Btn_Expense.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold)
         Btn_Expense.ForeColor = SystemColors.ControlText
-        Btn_Expense.Location = New Point(628, 107)
+        Btn_Expense.Location = New Point(870, 113)
         Btn_Expense.Name = "Btn_Expense"
-        Btn_Expense.Size = New Size(273, 47)
+        Btn_Expense.Size = New Size(395, 49)
         Btn_Expense.TabIndex = 8
         Btn_Expense.Text = "EXPENSE"
         Btn_Expense.UseVisualStyleBackColor = False
@@ -80,126 +81,135 @@ Partial Class Income
         ' Btn_Income
         ' 
         Btn_Income.BackColor = SystemColors.ButtonShadow
-        Btn_Income.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold)
+        Btn_Income.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold)
         Btn_Income.ForeColor = SystemColors.ControlText
-        Btn_Income.Location = New Point(349, 107)
+        Btn_Income.Location = New Point(469, 113)
         Btn_Income.Name = "Btn_Income"
-        Btn_Income.Size = New Size(273, 47)
+        Btn_Income.Size = New Size(395, 49)
         Btn_Income.TabIndex = 7
         Btn_Income.Text = "INCOME"
         Btn_Income.UseVisualStyleBackColor = False
         ' 
         ' Btn_Transaction
         ' 
-        Btn_Transaction.BackColor = SystemColors.ButtonShadow
-        Btn_Transaction.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold)
+        Btn_Transaction.BackColor = SystemColors.ButtonFace
+        Btn_Transaction.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold)
         Btn_Transaction.ForeColor = SystemColors.ControlText
-        Btn_Transaction.Location = New Point(70, 107)
+        Btn_Transaction.Location = New Point(68, 113)
         Btn_Transaction.Name = "Btn_Transaction"
-        Btn_Transaction.Size = New Size(273, 47)
+        Btn_Transaction.Size = New Size(395, 49)
         Btn_Transaction.TabIndex = 6
         Btn_Transaction.Text = "TRANSACTION"
         Btn_Transaction.UseVisualStyleBackColor = False
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic)
-        Label4.Location = New Point(432, 405)
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = SystemColors.ControlLightLight
+        Label4.Location = New Point(566, 548)
         Label4.Name = "Label4"
-        Label4.Size = New Size(174, 24)
+        Label4.Size = New Size(259, 31)
         Label4.TabIndex = 13
         Label4.Text = "CATEGORY"
         ' 
         ' Combo_Category
         ' 
-        Combo_Category.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Combo_Category.Font = New Font("Microsoft Sans Serif", 18F)
         Combo_Category.FormattingEnabled = True
         Combo_Category.Items.AddRange(New Object() {"Allowance", "Award", "Bonus", "Investment", "Lottery", "Salary", "Tips", "Others"})
-        Combo_Category.Location = New Point(432, 432)
+        Combo_Category.Location = New Point(566, 582)
         Combo_Category.Name = "Combo_Category"
-        Combo_Category.Size = New Size(431, 37)
+        Combo_Category.Size = New Size(627, 44)
         Combo_Category.TabIndex = 14
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(432, 227)
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = SystemColors.ControlLightLight
+        Label5.Location = New Point(566, 274)
         Label5.Name = "Label5"
-        Label5.Size = New Size(126, 23)
+        Label5.Size = New Size(259, 31)
         Label5.TabIndex = 15
         Label5.Text = "AMOUNT"
         ' 
         ' Text_incomeAmount
         ' 
-        Text_incomeAmount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_incomeAmount.Location = New Point(432, 253)
+        Text_incomeAmount.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_incomeAmount.Location = New Point(566, 308)
         Text_incomeAmount.Name = "Text_incomeAmount"
-        Text_incomeAmount.Size = New Size(431, 34)
+        Text_incomeAmount.Size = New Size(627, 41)
         Text_incomeAmount.TabIndex = 16
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic)
-        Label6.Location = New Point(432, 490)
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = SystemColors.ControlLightLight
+        Label6.Location = New Point(566, 688)
         Label6.Name = "Label6"
-        Label6.Size = New Size(197, 23)
+        Label6.Size = New Size(259, 31)
         Label6.TabIndex = 17
         Label6.Text = "DESCRIPTION"
         ' 
         ' Text_Description
         ' 
-        Text_Description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Description.Location = New Point(432, 516)
+        Text_Description.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Description.Location = New Point(566, 722)
         Text_Description.Name = "Text_Description"
-        Text_Description.Size = New Size(431, 34)
+        Text_Description.Size = New Size(627, 41)
         Text_Description.TabIndex = 18
         ' 
         ' Button1
         ' 
-        Button1.BackColor = SystemColors.ButtonHighlight
-        Button1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(563, 556)
+        Button1.BackColor = SystemColors.ButtonFace
+        Button1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(766, 800)
         Button1.Name = "Button1"
-        Button1.Size = New Size(159, 40)
+        Button1.Size = New Size(226, 42)
         Button1.TabIndex = 19
         Button1.Text = "SUBMIT"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic)
-        Label2.Location = New Point(432, 319)
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = SystemColors.ControlLightLight
+        Label2.Location = New Point(566, 409)
         Label2.Name = "Label2"
-        Label2.Size = New Size(126, 23)
+        Label2.Size = New Size(259, 31)
         Label2.TabIndex = 20
         Label2.Text = "SOURCE"
         ' 
         ' Combo_Source
         ' 
-        Combo_Source.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Combo_Source.Font = New Font("Microsoft Sans Serif", 18F)
         Combo_Source.FormattingEnabled = True
         Combo_Source.Items.AddRange(New Object() {"Company Salary", "Part-Time Job", "Online Selling", "Freelance Project", "Commission"})
-        Combo_Source.Location = New Point(432, 345)
+        Combo_Source.Location = New Point(566, 443)
         Combo_Source.Name = "Combo_Source"
-        Combo_Source.Size = New Size(431, 37)
+        Combo_Source.Size = New Size(627, 44)
         Combo_Source.TabIndex = 21
         ' 
         ' Label_Status
         ' 
+        Label_Status.BackColor = Color.Transparent
         Label_Status.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label_Status.Location = New Point(432, 184)
+        Label_Status.Location = New Point(566, 766)
         Label_Status.Name = "Label_Status"
-        Label_Status.Size = New Size(431, 31)
+        Label_Status.Size = New Size(627, 31)
         Label_Status.TabIndex = 22
         Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Btn_Back
         ' 
-        Btn_Back.BackColor = SystemColors.ButtonHighlight
-        Btn_Back.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Back.BackColor = Color.Tomato
+        Btn_Back.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold)
         Btn_Back.Location = New Point(12, 11)
         Btn_Back.Name = "Btn_Back"
-        Btn_Back.Size = New Size(121, 30)
+        Btn_Back.Size = New Size(129, 37)
         Btn_Back.TabIndex = 43
         Btn_Back.Text = "LOGOUT"
         Btn_Back.UseVisualStyleBackColor = False
@@ -208,7 +218,8 @@ Partial Class Income
         ' 
         AutoScaleDimensions = New SizeF(9F, 23F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1252, 702)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(1732, 1003)
         Controls.Add(Btn_Back)
         Controls.Add(Label_Status)
         Controls.Add(Combo_Source)

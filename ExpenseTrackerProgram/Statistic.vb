@@ -6,6 +6,8 @@ Imports Microsoft.Data.SqlClient
 Public Class Statistic
 
     Private Sub Statistic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
         Try
             ' Load Pie Chart
             LoadExpensePieChart()
@@ -22,7 +24,7 @@ Public Class Statistic
         End Try
     End Sub
 
-    ' ------------------- PIE CHART (Percentage) -------------------
+    ' ------------------- PIE CHART -------------------
     Private Sub LoadExpensePieChart()
         Dim connectionString As String =
             "Server=DESKTOP-M517C16\SQLEXPRESS;Database=ExpenseTracker_DB;Integrated Security=True;Encrypt=False;"
@@ -79,7 +81,7 @@ Public Class Statistic
         End Using
     End Sub
 
-    ' ------------------- BAR CHART (Percentage) -------------------
+    ' ------------------- BAR CHART -------------------
     Private Sub LoadExpenseBarChart(periodType As String)
         Dim connectionString As String =
             "Server=DESKTOP-M517C16\SQLEXPRESS;Database=ExpenseTracker_DB;Integrated Security=True;Encrypt=False;"
@@ -125,7 +127,6 @@ Public Class Statistic
                 legend.Font = New Font("Microsoft Sans Serif", 11)
                 Expense_Bar.Legends.Add(legend)
 
-                ' Unique categories and periods
                 Dim categories = dt.AsEnumerable().Select(Function(r) r("Category").ToString()).Distinct().ToList()
                 Dim periods = dt.AsEnumerable().Select(Function(r) r("Period").ToString()).Distinct().OrderBy(Function(p) p).ToList()
 
@@ -140,7 +141,7 @@ Public Class Statistic
                     Expense_Bar.Series.Add(series)
                 Next
 
-                ' Add data points as percentage
+                ' Add data points for each period
                 For Each period In periods
                     Dim totalPeriod As Decimal = dt.AsEnumerable().
                         Where(Function(r) r("Period").ToString() = period).
@@ -156,7 +157,7 @@ Public Class Statistic
                     Next
                 Next
 
-                ' Format X-axis (daily same as monthly, no crowding)
+                ' Format X-axis
                 With Expense_Bar.ChartAreas("BarArea").AxisX
                     .Interval = 1
                     .LabelStyle.Angle = 0
@@ -178,6 +179,36 @@ Public Class Statistic
     ' ------------------- COMBOBOX CHANGE -------------------
     Private Sub Combo_Dates_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Dates.SelectedIndexChanged
         LoadExpenseBarChart(Combo_Dates.SelectedItem.ToString())
+    End Sub
+
+    ' ------------------- NAVIGATION BUTTONS -------------------
+
+    Private Sub Btn_Back_Click(sender As Object, e As EventArgs) Handles Btn_Back.Click
+        Dim Logout As New LoginForm()
+        Logout.StartPosition = FormStartPosition.CenterScreen
+        Logout.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_Transaction_Click(sender As Object, e As EventArgs) Handles Btn_Transaction.Click
+        Dim GoToTransaction As New Dashboard()
+        GoToTransaction.StartPosition = FormStartPosition.CenterScreen
+        GoToTransaction.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_Income_Click(sender As Object, e As EventArgs) Handles Btn_Income.Click
+        Dim GoToIncome As New Income()
+        GoToIncome.StartPosition = FormStartPosition.CenterScreen
+        GoToIncome.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_Expense_Click(sender As Object, e As EventArgs) Handles Btn_Expense.Click
+        Dim GoToExpense As New Expense()
+        GoToExpense.StartPosition = FormStartPosition.CenterScreen
+        GoToExpense.Show()
+        Me.Close()
     End Sub
 
 End Class

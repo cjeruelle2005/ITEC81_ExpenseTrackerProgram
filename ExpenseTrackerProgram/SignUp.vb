@@ -72,7 +72,13 @@ Public Class SignUp
 
     Private Sub Btn_Back_Click(sender As Object, e As EventArgs) Handles Btn_Back.Click
         Dim GoBack As New LoginForm()
+        GoBack.StartPosition = FormStartPosition.CenterScreen
         GoBack.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub SignUp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
     End Sub
 End Class

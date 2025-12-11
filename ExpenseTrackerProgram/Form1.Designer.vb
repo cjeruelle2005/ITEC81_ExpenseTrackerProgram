@@ -23,6 +23,7 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Label1 = New Label()
         Text_Email = New TextBox()
         Label2 = New Label()
@@ -31,56 +32,58 @@ Partial Class LoginForm
         Btn_SignUp = New Button()
         Btn_Exit = New Button()
         Label_Status = New Label()
-        Progress_Bar = New ProgressBar()
         Timer1 = New Timer(components)
         SuspendLayout()
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(84, 205)
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = SystemColors.ControlLightLight
+        Label1.Location = New Point(582, 496)
         Label1.Name = "Label1"
-        Label1.Size = New Size(117, 29)
+        Label1.Size = New Size(174, 29)
         Label1.TabIndex = 0
         Label1.Text = "Username"
         ' 
         ' Text_Email
         ' 
-        Text_Email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Email.Location = New Point(84, 235)
+        Text_Email.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Email.Location = New Point(582, 530)
         Text_Email.Margin = New Padding(3, 5, 3, 5)
         Text_Email.Name = "Text_Email"
-        Text_Email.Size = New Size(336, 34)
+        Text_Email.Size = New Size(517, 41)
         Text_Email.TabIndex = 1
         ' 
         ' Label2
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(84, 286)
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = SystemColors.ControlLightLight
+        Label2.Location = New Point(582, 602)
         Label2.Name = "Label2"
-        Label2.Size = New Size(89, 22)
+        Label2.Size = New Size(174, 29)
         Label2.TabIndex = 2
         Label2.Text = "Password"
         ' 
         ' Text_Password
         ' 
-        Text_Password.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Password.Location = New Point(84, 315)
+        Text_Password.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Text_Password.Location = New Point(582, 636)
         Text_Password.Margin = New Padding(3, 5, 3, 5)
         Text_Password.Name = "Text_Password"
         Text_Password.PasswordChar = "*"c
-        Text_Password.Size = New Size(336, 34)
+        Text_Password.Size = New Size(517, 41)
         Text_Password.TabIndex = 3
         ' 
         ' Btn_Login
         ' 
         Btn_Login.BackColor = SystemColors.ButtonHighlight
-        Btn_Login.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Login.Location = New Point(84, 382)
+        Btn_Login.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Login.Location = New Point(582, 730)
         Btn_Login.Margin = New Padding(3, 5, 3, 5)
         Btn_Login.Name = "Btn_Login"
-        Btn_Login.Size = New Size(117, 36)
+        Btn_Login.Size = New Size(165, 36)
         Btn_Login.TabIndex = 4
         Btn_Login.Text = "LOGIN"
         Btn_Login.UseVisualStyleBackColor = False
@@ -88,11 +91,11 @@ Partial Class LoginForm
         ' Btn_SignUp
         ' 
         Btn_SignUp.BackColor = SystemColors.ButtonHighlight
-        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_SignUp.Location = New Point(208, 382)
+        Btn_SignUp.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_SignUp.Location = New Point(758, 730)
         Btn_SignUp.Margin = New Padding(3, 5, 3, 5)
         Btn_SignUp.Name = "Btn_SignUp"
-        Btn_SignUp.Size = New Size(120, 36)
+        Btn_SignUp.Size = New Size(165, 36)
         Btn_SignUp.TabIndex = 5
         Btn_SignUp.Text = "SIGN UP"
         Btn_SignUp.UseVisualStyleBackColor = False
@@ -100,39 +103,34 @@ Partial Class LoginForm
         ' Btn_Exit
         ' 
         Btn_Exit.BackColor = Color.Tomato
-        Btn_Exit.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Exit.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Exit.ForeColor = SystemColors.InfoText
-        Btn_Exit.Location = New Point(336, 382)
+        Btn_Exit.Location = New Point(934, 730)
         Btn_Exit.Margin = New Padding(3, 5, 3, 5)
         Btn_Exit.Name = "Btn_Exit"
-        Btn_Exit.Size = New Size(84, 36)
+        Btn_Exit.Size = New Size(165, 36)
         Btn_Exit.TabIndex = 6
         Btn_Exit.Text = "EXIT"
         Btn_Exit.UseVisualStyleBackColor = False
         ' 
         ' Label_Status
         ' 
-        Label_Status.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label_Status.Location = New Point(84, 358)
+        Label_Status.BackColor = Color.Transparent
+        Label_Status.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_Status.ForeColor = SystemColors.ControlLightLight
+        Label_Status.Location = New Point(582, 682)
         Label_Status.Name = "Label_Status"
-        Label_Status.Size = New Size(336, 21)
+        Label_Status.Size = New Size(517, 31)
         Label_Status.TabIndex = 7
         Label_Status.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Progress_Bar
-        ' 
-        Progress_Bar.Location = New Point(84, 426)
-        Progress_Bar.Name = "Progress_Bar"
-        Progress_Bar.Size = New Size(336, 13)
-        Progress_Bar.TabIndex = 8
         ' 
         ' LoginForm
         ' 
         AutoScaleDimensions = New SizeF(9F, 23F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(522, 516)
-        Controls.Add(Progress_Bar)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(1732, 1003)
         Controls.Add(Label_Status)
         Controls.Add(Btn_Exit)
         Controls.Add(Btn_SignUp)
@@ -158,7 +156,6 @@ Partial Class LoginForm
     Friend WithEvents Btn_SignUp As Button
     Friend WithEvents Btn_Exit As Button
     Friend WithEvents Label_Status As Label
-    Friend WithEvents Progress_Bar As ProgressBar
     Friend WithEvents Timer1 As Timer
 
 End Class
