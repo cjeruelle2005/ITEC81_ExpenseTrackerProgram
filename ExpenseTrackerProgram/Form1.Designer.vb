@@ -33,6 +33,9 @@ Partial Class LoginForm
         Btn_Exit = New Button()
         Label_Status = New Label()
         Timer1 = New Timer(components)
+        PictureBox1 = New PictureBox()
+        Label3 = New Label()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -124,6 +127,26 @@ Partial Class LoginForm
         Label_Status.TabIndex = 7
         Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(631, 65)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(408, 369)
+        PictureBox1.TabIndex = 8
+        PictureBox1.TabStop = False
+        ' 
+        ' Label3
+        ' 
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = SystemColors.ControlLightLight
+        Label3.Location = New Point(14, 10)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(166, 58)
+        Label3.TabIndex = 9
+        Label3.Text = "Log In"
+        ' 
         ' LoginForm
         ' 
         AutoScaleDimensions = New SizeF(9F, 23F)
@@ -131,6 +154,8 @@ Partial Class LoginForm
         BackColor = SystemColors.Control
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1732, 1003)
+        Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         Controls.Add(Label_Status)
         Controls.Add(Btn_Exit)
         Controls.Add(Btn_SignUp)
@@ -144,6 +169,7 @@ Partial Class LoginForm
         Margin = New Padding(3, 5, 3, 5)
         Name = "LoginForm"
         Text = "Login"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -157,5 +183,7 @@ Partial Class LoginForm
     Friend WithEvents Btn_Exit As Button
     Friend WithEvents Label_Status As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label3 As Label
 
 End Class

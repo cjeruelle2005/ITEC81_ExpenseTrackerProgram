@@ -38,6 +38,8 @@ Partial Class SignUp
         Btn_Back = New Button()
         Status_Text = New TextBox()
         Label_Status = New Label()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -56,7 +58,7 @@ Partial Class SignUp
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ControlLightLight
-        Label2.Location = New Point(605, 386)
+        Label2.Location = New Point(605, 540)
         Label2.Name = "Label2"
         Label2.Size = New Size(149, 29)
         Label2.TabIndex = 2
@@ -65,7 +67,7 @@ Partial Class SignUp
         ' Text_FirstName
         ' 
         Text_FirstName.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_FirstName.Location = New Point(605, 418)
+        Text_FirstName.Location = New Point(605, 572)
         Text_FirstName.Name = "Text_FirstName"
         Text_FirstName.Size = New Size(525, 38)
         Text_FirstName.TabIndex = 3
@@ -75,7 +77,7 @@ Partial Class SignUp
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ControlLightLight
-        Label3.Location = New Point(605, 459)
+        Label3.Location = New Point(605, 613)
         Label3.Name = "Label3"
         Label3.Size = New Size(169, 29)
         Label3.TabIndex = 4
@@ -84,7 +86,7 @@ Partial Class SignUp
         ' Text_LastName
         ' 
         Text_LastName.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_LastName.Location = New Point(605, 491)
+        Text_LastName.Location = New Point(605, 645)
         Text_LastName.Name = "Text_LastName"
         Text_LastName.Size = New Size(525, 38)
         Text_LastName.TabIndex = 5
@@ -94,7 +96,7 @@ Partial Class SignUp
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = SystemColors.ControlLightLight
-        Label4.Location = New Point(605, 532)
+        Label4.Location = New Point(605, 686)
         Label4.Name = "Label4"
         Label4.Size = New Size(149, 29)
         Label4.TabIndex = 6
@@ -103,7 +105,7 @@ Partial Class SignUp
         ' Text_Email
         ' 
         Text_Email.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Email.Location = New Point(605, 564)
+        Text_Email.Location = New Point(605, 718)
         Text_Email.Name = "Text_Email"
         Text_Email.Size = New Size(525, 38)
         Text_Email.TabIndex = 7
@@ -113,7 +115,7 @@ Partial Class SignUp
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = SystemColors.ControlLightLight
-        Label5.Location = New Point(605, 605)
+        Label5.Location = New Point(605, 759)
         Label5.Name = "Label5"
         Label5.Size = New Size(179, 29)
         Label5.TabIndex = 8
@@ -122,7 +124,7 @@ Partial Class SignUp
         ' Text_Password
         ' 
         Text_Password.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Password.Location = New Point(605, 637)
+        Text_Password.Location = New Point(605, 791)
         Text_Password.Name = "Text_Password"
         Text_Password.Size = New Size(525, 38)
         Text_Password.TabIndex = 9
@@ -132,7 +134,7 @@ Partial Class SignUp
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ControlLightLight
-        Label6.Location = New Point(605, 678)
+        Label6.Location = New Point(605, 832)
         Label6.Name = "Label6"
         Label6.Size = New Size(156, 29)
         Label6.TabIndex = 10
@@ -141,7 +143,7 @@ Partial Class SignUp
         ' Text_Contact
         ' 
         Text_Contact.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Text_Contact.Location = New Point(605, 710)
+        Text_Contact.Location = New Point(605, 864)
         Text_Contact.Name = "Text_Contact"
         Text_Contact.Size = New Size(525, 38)
         Text_Contact.TabIndex = 11
@@ -150,7 +152,7 @@ Partial Class SignUp
         ' 
         Btn_Enter.BackColor = SystemColors.ButtonFace
         Btn_Enter.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Enter.Location = New Point(956, 754)
+        Btn_Enter.Location = New Point(956, 908)
         Btn_Enter.Name = "Btn_Enter"
         Btn_Enter.Size = New Size(174, 44)
         Btn_Enter.TabIndex = 12
@@ -161,7 +163,7 @@ Partial Class SignUp
         ' 
         Btn_Back.BackColor = SystemColors.ButtonFace
         Btn_Back.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Back.Location = New Point(605, 754)
+        Btn_Back.Location = New Point(605, 908)
         Btn_Back.Name = "Btn_Back"
         Btn_Back.Size = New Size(174, 44)
         Btn_Back.TabIndex = 13
@@ -173,7 +175,7 @@ Partial Class SignUp
         Status_Text.BackColor = SystemColors.Control
         Status_Text.BorderStyle = BorderStyle.None
         Status_Text.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Status_Text.Location = New Point(605, 348)
+        Status_Text.Location = New Point(605, 502)
         Status_Text.Name = "Status_Text"
         Status_Text.Size = New Size(525, 23)
         Status_Text.TabIndex = 14
@@ -188,12 +190,22 @@ Partial Class SignUp
         Label_Status.TabIndex = 15
         Label_Status.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(631, 65)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(408, 369)
+        PictureBox1.TabIndex = 16
+        PictureBox1.TabStop = False
+        ' 
         ' SignUp
         ' 
         AutoScaleDimensions = New SizeF(9F, 23F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1732, 1003)
+        Controls.Add(PictureBox1)
         Controls.Add(Label_Status)
         Controls.Add(Status_Text)
         Controls.Add(Btn_Back)
@@ -212,6 +224,7 @@ Partial Class SignUp
         Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Name = "SignUp"
         Text = "SignUp"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -231,4 +244,5 @@ Partial Class SignUp
     Friend WithEvents Btn_Back As Button
     Friend WithEvents Status_Text As TextBox
     Friend WithEvents Label_Status As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
